@@ -1,20 +1,12 @@
 #ifndef __NODE__HPP
 #define __NODE__HPP
 
-template <typename T>
+template <class T> 
 class Node 
 {
     public:
-        Node();
-        Node( T val );
-        ~Node();
-        
-        void add();
-        void remove();
-        void insert();
-
+        Node( T val ) : m_val ( val ) {}
     private:
-        Node* nextNode;
         T m_val;
 };
-#endif
+#endif 
