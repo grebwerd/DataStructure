@@ -5,8 +5,16 @@ template <class T>
 class Node 
 {
     public:
-        Node( T val ) : m_val ( val ) {}
+        Node(): nextNode( NULL ) {}
+        Node( T val ) : m_val ( val ), nextNode( NULL ) {}
+        const T getVal() 
+        {
+            return m_val;
+        }
+
+        Node<T>* nextNode;
     private:
         T m_val;
+
 };
 #endif 
